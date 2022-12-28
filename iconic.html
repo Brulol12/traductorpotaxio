@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traductor potaxio iconic</title>
+  <!-- Enlace a Bootstrap o Materialize -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12   col-md-8 col-lg-6">
+        <h1 class="text-center display-4 mb-5">Traductor Potaxio Iconic</h1>
+        <form onsubmit="traducir(); return false;">
+          <div class="form-group">
+            <label for="texto-entrada">Ingresa el texto a traducir:</label>
+            <input type="text" id="texto-entrada" name="texto-entrada" class="form-control form-control-lg">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Traducir</button>
+        </form> 
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div id="resultado" class="bg-light p-5 rounded text-center display-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function traducir() {
+      // Obtener el texto de entrada
+      var texto = document.getElementById("texto-entrada").value;
+  
+      // Reemplazar la última letra de cada palabra por e
+      texto = texto.replace(/\b(\w+)(\w)\b/gi, "$1i");
+  
+      // Mostrar el resultado en el div de resultado
+      document.getElementById("resultado").innerHTML = texto;
+    }
+  </script>
+  
+</body>
+</html>
