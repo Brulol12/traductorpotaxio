@@ -36,6 +36,11 @@
       texto = texto.replace(/i/gi, "x");
       texto = texto.replace(/o/gi, "x");
       texto = texto.replace(/u/gi, "x");
+      texto = texto.replace(/á/gi, "x");
+      texto = texto.replace(/é/gi, "x");
+      texto = texto.replace(/í/gi, "x");
+      texto = texto.replace(/ó/gi, "x");
+      texto = texto.replace(/ú/gi, "x");
 
       // Mostrar el resultado en el div de resultado
       document.getElementById("resultado").innerHTML = texto;
