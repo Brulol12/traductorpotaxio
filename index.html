@@ -1,51 +1,46 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Traductor potaxio</title>
-  <!-- Enlace a Bootstrap o Materialize -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-</head>
-<body>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6">
-        <h1 class="text-center display-4 mb-5">Traductor Potaxio</h1>
-        <form onsubmit="traducir(); return false;">
-          <div class="form-group">
-            <label for="texto-entrada">Ingresa el texto a traducir:</label>
-            <input type="text" id="texto-entrada" name="texto-entrada" class="form-control form-control-lg">
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Traducir</button>
-        </form> 
-      </div>
+  <head>
+    <title>Traductor Potaxio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: #f0f0f0;
+      }
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      h5 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .button {
+        margin: 4px 2px;
+      }
+      .button i {
+        margin-right: 5px;
+      }
+      .button-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Traductor Potaxio</h1>
+    <h5>Toca los botones para traducir de español a los distintos tipos de potaxie:</h5>
+    <div class="button-container">
+      <button class="btn btn-primary btn-lg button" onclick="window.location.href='tradicional.html'"><i class="fas fa-language"></i>Tradicional</button>
+      <button class="btn btn-primary btn-lg button" onclick="window.location.href='inclusive.html'"><i class="fas fa-globe"></i>Inclusive</button>
+      <button class="btn btn-primary btn-lg button" onclick="window.location.href='mixto.html'"><i class="fas fa-comments"></i>Mixto</button>
+      <button class="btn btn-primary btn-lg button" onclick="window.location.href='ternurista.html'"><i class="fas fa-book"></i>Ternurista</button>
+      <button class="btn btn-primary btn-lg button" onclick="window.location.href='iconic.html'"><i class="fas fa-book"></i>Iconic</button>
+      <button class="btn btn-primary btn-lg button" onclick="window.location.href='mammy.html'"><i class="fas fa-book"></i>Mammy</button>
     </div>
-    <div class="row justify-content-center mt-5">
-      <div class="col-12 col-md-8 col-lg-6">
-        <div id="resultado" class="bg-light p-5 rounded text-center display-4"></div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function traducir() {
-      // Obtener el texto de entrada
-      var texto = document.getElementById("texto-entrada").value;
-
-      // Reemplazar las vocales por x
-      texto = texto.replace(/a/gi, "x");
-      texto = texto.replace(/e/gi, "x");
-      texto = texto.replace(/i/gi, "x");
-      texto = texto.replace(/o/gi, "x");
-      texto = texto.replace(/u/gi, "x");
-      texto = texto.replace(/á/gi, "x");
-      texto = texto.replace(/é/gi, "x");
-      texto = texto.replace(/í/gi, "x");
-      texto = texto.replace(/ó/gi, "x");
-      texto = texto.replace(/ú/gi, "x");
-
-      // Mostrar el resultado en el div de resultado
-      document.getElementById("resultado").innerHTML = texto;
-    }
-  </script>
-</body>
-</html>
+    <br>
+    <br>
+    <p><strong>Potaxie Tradicional</strong>: Este idioma es el más conocido en el planeta potaxie, pero actualmente está en decadencia por el Potaxie Inclusive, este lenguaje consiste en cambiar todas las vocales del Español Humano por una “X”.</p>
+    <p><strong>Potaxie Inclusive</strong>: Este idioma poco a poco está “destruyendo” al Potaxie Tradicional, este lenguaje consiste en cambiar el final de las palabras por una letra “E”.</p>
+    <p><strong>Potaxie Mixto</strong>: Este idioma consiste en combinar el lexico del Potaxie Tradicional y del Potaxie Inclusive, o en pocas palabres, cambiar las vocales de las palabras por “X” o “E”.</p>
+    <p><strong>Potaxie Ternurista</strong>: Este idioma fue creado por la Diose de la inclusividad Ternure68, este lenguaje consiste en cambiar todas las vocales de las palabras por la letra “E” de una forma parecida a la del Potaxie Tradicional.</p>
+    <p><strong>Potaxie Iconic</strong>: Este idioma es muy parecido al Potaxie Inclusive, solo con la diferencia de la escritura, ya que debemos cambiar las letras por una “I”.</p>
+    <p><strong>Potaxie Mammy</strong>: Este idioma está extinto, es decir, no se utiliza más en el planeta potaxie. Consistía en cambiar todas las vocales por la "A" menos la "I" que se transformaba en "Y"</p>
